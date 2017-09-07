@@ -1,0 +1,44 @@
+<div *ngIf="!auth.currentUser; else alreadyLoggedIn">
+
+  <h3>Acceso Social</h3>
+
+
+    <button (click)="signInWithGoogle()" class="button btn-social btn-google">
+      <i class="fa fa-google-plus fa-lg"></i> Conectar con Google
+    </button>
+
+    <button (click)="signInWithGithub()" class="button btn-social btn-github" disabled>
+      <i class="fa fa-github fa-lg"></i> Conectar con GitHub
+    </button>
+
+    <button (click)="signInWithFacebook()" class="button  btn-social btn-facebook" disabled>
+      <i class="fa fa-facebook fa-lg"></i> Conectar con Facebook
+    </button>
+
+    <button (click)="signInWithTwitter()" class="button  btn-social btn-twitter" disabled>
+      <i class="fa fa-twitter fa-lg"></i> Conectar con Twitter
+    </button>
+
+    <hr>
+
+    <h3>Acceso anónimo</h3>
+
+      <button (click)="signInAnonymously()" class="button button-info">
+        <i class="fa fa-user-secret fa-lg"></i> Conectar anónimamente
+      </button>
+
+    <hr>
+
+
+    <crm-user-form></crm-user-form>
+
+</div>
+
+
+
+
+<ng-template #alreadyLoggedIn>
+  <p class="text-success">
+    ¡Ya iniciado sesión!
+  </p>
+</ng-template>

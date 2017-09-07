@@ -1,0 +1,62 @@
+<form [formGroup]="userForm"  *ngIf="newUser"  (ngSubmit)="signup()">
+
+  <h3>Registro de un nuevo usuario.</h3>
+  <p class="btn btn-sm btn-secondary" (click)="toggleForm()">¿Ya registrado?</p>
+  <hr>
+
+  <label for="email">Email</label>
+  <input type="email" id="email" class="input"
+         formControlName="email" required >
+
+  <div *ngIf="formErrors.email" class="notification is-danger">
+    {{ formErrors.email }}
+  </div>
+
+  <label for="password">Password</label>
+  <input type="password" id="password" class="input"
+         formControlName="password" required >
+
+  <div *ngIf="formErrors.password" class="notification is-danger">
+    {{ formErrors.password }}
+  </div>
+
+  <div *ngIf="userForm.valid" class="notification is-success">El formulario es válido</div>
+  <button type="submit" class="button" [disabled]="!userForm.valid">Enviar</button>
+
+
+
+
+</form>
+
+
+<form [formGroup]="userForm"  *ngIf="!newUser"  (ngSubmit)="login()">
+
+  <h3>Usuario existente</h3>
+  <p class="btn btn-sm btn-secondary" (click)="toggleForm()">¿Nuevo usuario?</p>
+  <hr>
+
+  <label for="email">Email</label>
+  <input type="email" id="email" class="input"
+         formControlName="email" required >
+
+  <div *ngIf="formErrors.email" class="help is-danger">
+    {{ formErrors.email }}
+  </div>
+
+  <label for="password">Password</label>
+  <input type="password" id="password" class="input"
+         formControlName="password" required >
+
+  <div *ngIf="formErrors.password" class="help is-danger">
+    {{ formErrors.password }}
+  </div>
+
+  <button type="submit" class="button" [disabled]="!userForm.valid">Enviar</button>
+
+  <span *ngIf="userForm.valid" class="help is-success">El formulario parece válido</span>
+
+  <a *ngIf="!passReset && userForm.controls.email.valid" class="help is-info" (click)="resetPassword()">Restablecer contraseña para {{userForm.value.email}}?</a>
+  <p *ngIf="passReset" class="help is-info">Restablecimiento solicitado. Revise sus instrucciones de correo electrónico.</p>
+
+
+</form>

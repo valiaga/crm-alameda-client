@@ -1,0 +1,31 @@
+<h3>Formulario de nueva Unidad.</h3>
+<label class="label">Nombre: </label>
+<input placeholder="Nombre Unidad" 
+  class="input"
+  type="text"
+  [(ngModel)] = "unidad.nombre"
+  required
+  minlength="2" maxlength="15"
+  #nombre="ngModel"
+  autofocus
+  >
+  <div *ngIf="nombre.dirty">
+    <span *ngIf="nombre.errors; then errors else valid">La plantilla se muestra aqui</span>
+  </div>
+
+  <label class="checkbox">
+    <input type="checkbox"
+    [(ngModel)] = "unidad.estado"
+    #estado="ngModel"  
+    >
+    Activo
+  </label>
+  <br>
+  <button class="button is-primary" (click)="createUnidad()" [disabled]="!nombre.valid">Create</button>
+
+  <ng-template #valid>
+    <p class="help is-success" style="color: green">Bien</p>
+  </ng-template>
+  <ng-template #errors>
+    <p class="help is-danger" style="color: red">El formulario contiene errores.</p>
+  </ng-template>

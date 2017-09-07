@@ -1,0 +1,17 @@
+<!-- <h3 [ngClass]="{ 'strike-out': !persona.estado }"> -->
+<h3 >
+    {{ persona.nombres || 'No tiene título' }}
+</h3>
+
+<div class="card-content">
+    Persona: {{ persona.ap_paterno }} {{ persona.ap_materno }}
+    <br>
+    <p>Detalle Persona</p>
+</div>
+
+<div class="card-footer">
+    <span class="button is-small is-info card-footer-persona" (click)="updateNombre()">Editar Nombre</span>
+    <!-- <span class="button is-small is-success card-footer-persona" *ngIf='unidad.estado' (click)='updateEstado(false)'>Activar</span> -->
+    <!-- <span class="button is-small is-warning card-footer-persona" *ngIf='!unidad.estado' (click)='updateEstado(true)'>Desactivar</span> -->
+    <span class="button is-small is-danger card-footer-persona" (click)='deletePersona()'>Eliminar</span>
+</div>

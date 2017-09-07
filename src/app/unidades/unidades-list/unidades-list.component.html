@@ -1,0 +1,14 @@
+<h1>Unidades</h1>
+<p>Las unidades son un sistema de agrupar a los miembros del club de conquistadores.</p>
+
+<div *ngFor = "let unidad of unidades | async" class="card">
+  <crm-unidad-detail [unidad] = "unidad"></crm-unidad-detail>
+</div>
+
+<crm-loading-spinner *ngIf="showSpinner"></crm-loading-spinner>
+
+<button type="button" class="button is-danger" (click)="deleteUnidades()">Eliminar toda la lista</button>
+
+<hr>
+
+<crm-unidad-form></crm-unidad-form>

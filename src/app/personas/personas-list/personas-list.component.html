@@ -1,0 +1,8 @@
+<h1>Personas</h1>
+<p>Lista de conquistadores.</p>
+
+<div *ngFor = "let persona of personas | async" class="card">
+  <crm-persona-detail [persona] = "persona"></crm-persona-detail>
+</div>
+
+<crm-loading-spinner *ngIf="showSpinner"></crm-loading-spinner>
