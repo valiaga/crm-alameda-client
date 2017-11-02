@@ -1,3 +1,182 @@
-<p>
-  persona-form works!
-</p>
+<!--<div class="card">
+  <header class="card-header">
+
+  </header>
+   <div class="card-content"> -->
+  <form [formGroup]="personaForm" (ngSubmit)="onSubmit(personaForm)" novalidate>
+    <div class="field is-horizontal">
+      <div class="field-label is-small">
+        <label for="nombres" class="label">Nombres:</label>
+      </div>
+      <div class="field-body">
+          <div class="field">
+            <p class="control is-expanded has-icons-left">
+              <input id="nombres" 
+                    class="input is-small" 
+                    type="text" 
+                    placeholder="Ingrese sus nombres"
+                    formControlName="nombres">
+              <span class="icon is-small is-left">
+                <i class="fa fa-user"></i>
+              </span>
+            </p>
+          </div>
+        </div>
+    </div>
+    <div class="field is-horizontal">
+      <div class="field-label is-small">
+        <label for="ap_paterno" class="label">Apellidos:</label>
+      </div>
+      <div class="field-body">
+        <div class="field">
+          <p class="control is-expanded">
+            <input id="ap_paterno" 
+                  class="input is-small" 
+                  type="text" 
+                  placeholder="Ingrese su apellido paterno"
+                  formControlName="ap_paterno"
+                  >
+          </p>
+        </div>
+        <div class="field">
+          <p class="control is-expanded">
+            <input id="ap_materno" 
+                  formControlName="ap_materno"
+                  class="input is-small" 
+                  type="text" 
+                  placeholder="Ingrese su apellido materno">
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="field is-horizontal">
+      <div class="field-label is-small">
+        <label for="num_doc" class="label">Nro° documento:</label>
+      </div>
+      <div class="field-body">
+        <div class="field">
+          <p class="control is-expanded">
+            <input class="input is-small" 
+                  id="num_doc" 
+                  formControlName="num_doc"
+                  type="text" 
+                  placeholder="Ingrese el n° de dni.">
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="field is-horizontal">
+      <div class="field-label is-small">
+        <label for="celular" class="label">Celular:</label>
+      </div>
+      <div class="field-body">
+        <div class="field is-expanded">
+          <div class="field has-addons">
+            <p class="control">
+              <a class="button is-small is-static">
+                +51
+              </a>
+            </p>
+            <p class="control is-expanded">
+              <input id="celular" 
+                    formControlName="celular"
+                    class="input is-small" 
+                    type="tel" 
+                    placeholder="Su número de celular">
+            </p>
+          </div>
+          <p class="help is-small">No ingrese el primer número con cero</p>
+        </div>
+      </div>
+    </div>
+    <div class="field is-horizontal">
+      <div class="field-label is-small">
+        <label for="email" class="label">e-mail:</label>
+      </div>
+      <div class="field-body">
+        <div class="field">
+          <p class="control is-expanded has-icons-left has-icons-right">
+            <input id="email" 
+                  formControlName="email"
+                  class="input is-small is-success" 
+                  type="email" 
+                  placeholder="Email" 
+                  value="alex@smith.com">
+            <span class="icon is-small is-left">
+              <i class="fa fa-envelope"></i>
+            </span>
+            <span class="icon is-small is-right">
+              <i class="fa fa-check"></i>
+            </span>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="field is-horizontal">
+      <div class="field-label is-small">
+        <label for="sexo_m" class="label">Sexo</label>
+      </div>
+      <div class="field-body">
+        <div class="field is-narrow is-small">
+          <div class="control">
+            <label class="radio">
+              <input id="sexo_m" type="radio" name="sexo">
+              Masculino
+            </label>
+            <label class="radio">
+              <input id="sexo_f" type="radio" name="sexo">
+              Femenino
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="field is-horizontal">
+      <div class="field-label is-small">
+        <label class="label">Observaciones</label>
+      </div>
+      <div class="field-body">
+        <div class="field">
+          <div class="control">
+            <textarea class="textarea is-small"
+                      id="observaciones"
+                      formControlName="observaciones" 
+                      placeholder="Explain how we can help you"></textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="field is-horizontal">
+      <div class="field-label">
+        <!-- Left empty for spacing -->
+      </div>
+      <div class="field-body">
+        <div class="field">
+          <div class="control">
+            <button class="button is-primary is-small"
+            (click)="createPersona()"
+            [disabled] = "!personaForm.valid"
+            >
+              Guardar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <ng-template #valid>
+      <!-- <p class="help is-success" style="color: green">Bien</p> -->
+      <p class="help is-success">Bien</p>
+    </ng-template>
+    <ng-template #errors>
+      <!-- <p class="help is-danger" style="color: red">El formulario contiene errores.</p> -->
+      <p class="help is-danger" >El formulario contiene errores.</p>
+    </ng-template>
+  </form>
+    <!--</div>-->
+ <!--  <div class="card-footer"> -->
+    <!-- <a href="#" class="card-footer-item">Guardar</a> -->
+    <!-- <a href="#" class="card-footer-item">Cancelar</a> -->
+    <!-- <a href="#" class="button">Guardar</a>
+
+  </div>
+</div>-->

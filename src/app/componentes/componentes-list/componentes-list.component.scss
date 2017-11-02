@@ -1,0 +1,50 @@
+.componentes .column:hover {
+    background-color: #ffdd2e; /* Add a hover color */
+    // background-color: rgba(255, 196, 57, 0.72); /* Add a hover color */
+}
+.features-list .feature-block .ico {
+    font-size: 37px;
+    line-height: 70px;
+    // width:70px;
+    height: 70px;
+    background: #5accff;
+    display: inline-block;
+    border-radius: 50%;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+}
+.features-list .feature-block.bottom-line .ico {
+    // width: auto;
+    height: auto;
+	background: transparent;
+	color: #5accff;
+	text-align: center;
+	font-size: 41px;
+	vertical-align: top;
+	margin-top: -10px;
+}
+
+.features-list .feature-block .img {
+    font-size: 37px;
+    line-height: 70px;
+    width:70px;
+    height: 70px;
+    display: inline-block;
+}
+
+.features-list .feature-block.bottom-line .ico {
+	float: left;
+	margin-right: 15px;
+	margin-left: 21px;
+}
+.features-list .feature-block .name {
+    font-size: 20px;
+    line-height: 1.25em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.features-list .feature-block .text {
+    font-size: 12px;
+    line-height: normal;
+    margin-bottom: 15px;
+}

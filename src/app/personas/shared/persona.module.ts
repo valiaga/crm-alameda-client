@@ -1,3 +1,4 @@
+import { PersonaRoutingModule } from './persona-routing.module';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PersonaDetailComponent } from '../persona-detail/persona-detail.component';
@@ -15,8 +16,9 @@ import { PersonaService } from "./persona.service";
     SharedModule,
     ReactiveFormsModule,
     FormsModule,
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
 
+    PersonaRoutingModule
   ],
   declarations: [
     PersonasListComponent,

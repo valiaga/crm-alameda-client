@@ -19,10 +19,14 @@ export const firebaseConfig = environment.firebase;
 
 //importamos el módulo de formularios
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+//import { ComponentesComponent } from './componentes/componentes.component';
+// import { ConquistadoresComponent } from './componentes/conquistadores/conquistadores.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    // ComponentesComponent,
+    // ConquistadoresComponent
   ],
   imports: [
     BrowserModule,

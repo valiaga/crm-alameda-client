@@ -7,6 +7,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { UnidadService } from './unidad.service';
 import { NgModule } from '@angular/core';
+import { UnidadesRoutingModule } from "./unidades-routing.module";
 
 @NgModule({
     imports: [
@@ -16,7 +17,8 @@ import { NgModule } from '@angular/core';
 
         ReactiveFormsModule,
         FormsModule,
-        AngularFireDatabaseModule
+        AngularFireDatabaseModule,
+        UnidadesRoutingModule
     ],
     declarations: [
         UnidadesListComponent,

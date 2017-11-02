@@ -1,0 +1,128 @@
+.view-account {
+  background: #FFFFFF;
+  margin-top: 20px;
+  .side-bar {
+    padding-bottom: 30px;
+    .side-menu {
+      text-align: center;
+      .nav {
+        display: inline-block;
+        margin: 0 auto;
+        > li {
+          font-size: 14px;
+          margin-bottom: 0;
+          border-bottom: none;
+          display: inline-block;
+          float: left;
+          margin-right: 15px;
+          margin-bottom: 15px;
+          &:last-child {
+            margin-right: 0;
+          }
+          > a {
+            display: inline-block;
+            color: #9499a3;
+            padding: 5px;
+            border-bottom: 2px solid transparent;
+            &:hover {
+              color: #616670;
+              background: none;
+            }
+          }
+          &.active a {
+            color: #40babd;
+            border-bottom: 2px solid #40babd;
+            background: none;
+            border-right: none;
+          }
+          .icon {
+            display: block;
+            font-size: 24px;
+            margin-bottom: 5px;
+          }
+        }
+      }
+    }
+  }
+  .content-panel {
+    padding: 0 30px;
+    .title {
+      margin-bottom: 15px;
+      margin-top: 0;
+      font-size: 18px;
+    }
+    .content-header-wrapper {
+      position: relative;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .view-account .content-panel {
+    .title {
+      text-align: center;
+    }
+    padding: 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .view-account {
+    .content-panel {
+      min-height: 800px;
+      border-left: 1px solid #f3f3f7;
+      margin-left: 200px;
+    }
+    .side-bar {
+      position: absolute;
+      width: 200px;
+      min-height: 600px;
+      .side-menu {
+        text-align: left;
+        .nav {
+          display: block;
+          > li {
+            display: block;
+            float: none;
+            font-size: 14px;
+            border-bottom: 1px solid #f3f3f7;
+            margin-right: 0;
+            margin-bottom: 0;
+            > a {
+              display: block;
+              color: #9499a3;
+              padding: 10px 15px;
+              padding-left: 30px;
+              &:hover {
+                background: #f9f9fb;
+              }
+            }
+            &.active a {
+              background: #f9f9fb;
+              border-right: 4px solid #40babd;
+              border-bottom: none;
+            }
+          }
+        }
+      }
+    }
+  }
+  .view-account .side-bar .side-menu .nav > li .icon {
+    font-size: 24px;
+    vertical-align: middle;
+    text-align: center;
+    width: 40px;
+    display: inline-block;
+  }
+}
+
+.module {
+  border: 1px solid #f3f3f3;
+  border-bottom-width: 2px;
+  background: #fff;
+  margin-bottom: 30px;
+  position: relative;
+  border-radius: 4px;
+  background-clip: padding-box;
+}

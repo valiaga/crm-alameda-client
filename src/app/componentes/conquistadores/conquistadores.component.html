@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="view-account">
+        <section class="module">
+            <div class="module-inner">
+                <div class="side-bar">
+                    <nav class="side-menu">
+                        <ul class="nav">
+                            <li [routerLinkActive]="['active']"><a [routerLink]="['personas']"><span class="fa fa-user"></span> Conquistadores</a></li>
+                            <li [routerLinkActive]="['active']"><a [routerLink]="['unidades']"><span class="fa fa-cog"></span> Unidades</a></li>
+                            <li><a routerLink="personas" routerLinkActive="active"><span class="fa fa-credit-card"></span> Eventos</a></li>
+                            <li><a routerLink="personas" routerLinkActive="active"><span class="fa fa-th"></span> Inscripciones</a></li>
+                            <li><a routerLink="personas" routerLinkActive="active"><span class="fa fa-clock-o"></span> Cumpleaños</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="content-panel">
+                    <!--<div class="content-header-wrapper">
+                        <h2 class="title">My Drive</h2>
+                    </div>-->
+                    <!--<div class="content-body">
+                    </div>-->
+                    <router-outlet></router-outlet>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>

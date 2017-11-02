@@ -1,8 +1,62 @@
-<h1>Personas</h1>
-<p>Lista de conquistadores.</p>
+<div class="buttons has-addons">
+    <a class="button is-small is-info is-outlined"
+      [routerLink]="['nuevo']"
+      >
+      <span class="icon">
+        <i class="fa fa-plus-square-o"></i>
+      </span>
+      <span>Nuevo</span>
+    </a>
+    <a class="button is-small is-info is-outlined">
+      <span class="icon">
+        <i class="fa fa-file-excel-o"></i>
+        <!-- <i class="fa fa-file-excel-o"></i> -->
+      </span>
+      <span>&nbsp;&nbsp; Importar</span>
+    </a>
+    <a class="button is-small is-info is-outlined">
+        <span class="icon">
+          <i class="fa fa-file-excel-o"></i>
+        </span>
+        <span>Exportar</span>
+    </a>
+    <a class="button is-small is-info is-outlined">
+      <span class="icon">
+        <i class="fa fa-gg"></i>
+      </span>
+      <span>Exportar</span>
+    </a>
 
+</div>
+
+
+<h3>Personas</h3>
+<!-- <p>Lista de conquistadores.</p> -->
+
+<table class="table is-narrow is-striped">
+  <thead>
+    <tr>
+      <th>Nombres</th>
+      <th>Apellidos</th>
+      <th>Dni</th>
+      <th>Celular</th>
+      <th>Rol</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor = "let persona of personas | async" >
+      <td><a href="">{{ persona.nombres || 'No tiene título' }}</a></td>
+      <td>{{ persona.ap_paterno }} {{ persona.ap_materno }}</td>
+      <td>70539175</td>
+      <td>953279430</td>
+      <td>Director</td>
+    </tr>
+  </tbody>
+  <tfoot></tfoot>
+</table>
+<!--
 <div *ngFor = "let persona of personas | async" class="card">
   <crm-persona-detail [persona] = "persona"></crm-persona-detail>
-</div>
+</div>-->
 
 <crm-loading-spinner *ngIf="showSpinner"></crm-loading-spinner>
