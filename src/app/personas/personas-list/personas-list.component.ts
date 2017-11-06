@@ -26,4 +26,9 @@ export class PersonasListComponent implements OnInit {
     console.log("Click eliminar toda la lista de personas");
   }
 
+  deletePersona(key){
+    this.personaService.deletePersona(key);
+    console.log("Click eliminar toda la lista de personas");
+  }
+
 }

@@ -4,9 +4,12 @@ export class Persona {
     ap_paterno: string;
     ap_materno: string;
     fecha_nacimiento: Date;
-    dni: string;
+    num_doc: string;
     celular: string;
+    email: string;
+    sexo: string;
     telefono: string;
+    observaciones: string;
     direccion: string;
     latitud: number;
     longitud: number;

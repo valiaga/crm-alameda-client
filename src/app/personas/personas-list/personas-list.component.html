@@ -38,18 +38,29 @@
     <tr>
       <th>Nombres</th>
       <th>Apellidos</th>
-      <th>Dni</th>
+      <th>Num Doc</th>
       <th>Celular</th>
       <th>Rol</th>
+      <th>Opc</th>
     </tr>
   </thead>
   <tbody>
     <tr *ngFor = "let persona of personas | async" >
-      <td><a href="">{{ persona.nombres || 'No tiene título' }}</a></td>
+      <td><a  [routerLink]="[persona.$key]">{{ persona.nombres || 'No tiene título' }}</a></td>
       <td>{{ persona.ap_paterno }} {{ persona.ap_materno }}</td>
-      <td>70539175</td>
-      <td>953279430</td>
+      <td>{{ persona.num_doc }}</td>
+      <td>{{ persona.celular }}</td>
       <td>Director</td>
+      <td>
+        <a 
+          (click)="deletePersona(persona.$key)"
+          class="button is-danger is-small is-outlined">
+          <span>Eliminar</span>
+          <span class="icon is-small">
+            <i class="fa fa-times"></i>
+          </span>
+        </a>
+      </td>
     </tr>
   </tbody>
   <tfoot></tfoot>
