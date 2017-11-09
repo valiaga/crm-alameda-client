@@ -9,19 +9,19 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class UnidadDetailComponent implements OnInit {
 
-  @Input() unidad: Unidad;
+  // @Input() unidad: Unidad;
 
   constructor(private unidadService: UnidadService) { }
 
   ngOnInit() {
   }
 
-  updateNombre(){
-    this.unidadService.updateUnidad(this.unidad.$key, { nombre: 'Nuevo Nombre'})
-  }
+  // updateNombre(){
+  //   this.unidadService.updateUnidad(this.unidad.$key, { nombre: 'Nuevo Nombre'})
+  // }
 
-  deleteUnidad(){
-    this.unidadService.deleteUnidad(this.unidad.$key);
-  }
+  // deleteUnidad(){
+  //   this.unidadService.deleteUnidad(this.unidad.$key);
+  // }
 
 }

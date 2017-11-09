@@ -1,3 +1,4 @@
+import { UnidadDetailComponent } from '../unidad-detail/unidad-detail.component';
 import { UnidadesListComponent } from '../unidades-list/unidades-list.component';
 import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
@@ -12,6 +13,10 @@ const routes: Routes = [
     //         component: ConquistadoresComponent
     //     }
     // ]
+  },
+  { 
+    path: ':key', 
+    component: UnidadDetailComponent,
   },
 ]
 

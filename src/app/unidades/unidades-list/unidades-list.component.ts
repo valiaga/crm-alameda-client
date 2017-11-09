@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'crm-unidades-list',
   templateUrl: './unidades-list.component.html',
-  styleUrls: ['./unidades-list.component.scss']
+  styleUrls: ['./unidades-list.component.scss'],
 })
 export class UnidadesListComponent implements OnInit {
 
@@ -23,6 +23,14 @@ export class UnidadesListComponent implements OnInit {
   deleteUnidades(){
     this.unidadService.deleteAll();
     console.log("Click eliminar toda la lista");
+  }
+
+  // updateNombre(){
+  //   this.unidadService.updateUnidad(this.unidad.$key, { nombre: 'Nuevo Nombre'})
+  // }
+
+  deleteUnidad($key){
+    this.unidadService.deleteUnidad($key);
   }
 
 }

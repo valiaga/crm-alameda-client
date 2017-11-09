@@ -1,19 +1,29 @@
+<nav class="panel">
+    <div class="tabs">
+        <ul>
+            <li class="is-active"><a href="">Datos Generales</a></li>
+            <li><a href="">Conquistadores</a></li>
+            <li><a href="">Consejeros</a></li>
+            <li><a href="">Fotos</a></li>
+        </ul>
+    </div>
+</nav>
+    
+
+<!-- 
 <h3 [ngClass]="{ 'strike-out': !unidad.estado }">
     {{ unidad.nombre || 'No tiene título' }}
 </h3>
 
 <div class="card-content">
+    
     Unidad Activa: {{ unidad.estado }}
-    <br>
     <p>Detalle Unidad</p>
 </div>
-
-<!--<h5>{{unidad.nombre || 'Le falta Titulo'}}</h5>-->
-<!--Active: {{unidad.estado}}-->
-
 <div class="card-footer">
-    <span class="button is-small is-info card-footer-unidad" (click)="updateNombre()">Editar Nombre</span>
+    <span class="button is-small is-info card-footer-unidad" (click)="updateNombre()">Ver</span>
     <span class="button is-small is-success card-footer-unidad" *ngIf='unidad.estado' (click)='updateEstado(false)'>Activar</span>
     <span class="button is-small is-warning card-footer-unidad" *ngIf='!unidad.estado' (click)='updateEstado(true)'>Desactivar</span>
     <span class="button is-small is-danger card-footer-unidad" (click)='deleteUnidad()'>Eliminar</span>
 </div>
+-->

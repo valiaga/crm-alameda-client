@@ -1,8 +1,22 @@
-<h1>Unidades</h1>
-<p>Las unidades son un sistema de agrupar a los miembros del club de conquistadores.</p>
+<!-- <h1>Unidades</h1> -->
+<!-- <p>Las unidades son un sistema de agrupar a los miembros del club de conquistadores.</p> -->
 
 <div *ngFor = "let unidad of unidades | async" class="card">
-  <crm-unidad-detail [unidad] = "unidad"></crm-unidad-detail>
+  
+  <h3 [ngClass]="{ 'strike-out': !unidad.estado }">
+        {{ unidad.nombre || 'No tiene título' }}
+  </h3>
+  <div class="card-content">
+        Unidad Activa: {{ unidad.estado }}
+        <p>Detalle Unidad</p>
+  </div>
+  <div class="card-footer">
+        <a [routerLink]="[unidad.$key]" class="button is-small is-info card-footer-unidad" >Ver</a>
+        <!-- <span class="button is-small is-success card-footer-unidad" *ngIf='unidad.estado' (click)='updateEstado(false)'>Activar</span> -->
+        <!-- <span class="button is-small is-warning card-footer-unidad" *ngIf='!unidad.estado' (click)='updateEstado(true)'>Desactivar</span> -->
+        <span class="button is-small is-danger card-footer-unidad" (click)='deleteUnidad(unidad.$key)'>Eliminar</span>
+  </div>
+  <!-- <crm-unidad-detail [unidad] = "unidad"></crm-unidad-detail> -->
 </div>
 
 <crm-loading-spinner *ngIf="showSpinner"></crm-loading-spinner>
